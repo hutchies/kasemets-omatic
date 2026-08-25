@@ -1,0 +1,26 @@
+{
+  "name": "kasemets",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^7.3.0",
+    "svelte": "^5.56.10",
+    "vite": "^8.2.2"
+  },
+  "dependencies": {
+    "cmu-pronouncing-dictionary": "^3.0.0",
+    "compromise": "^14.16.0",
+    "compromise-speech": "^0.1.1",
+    "hyphenated": "^1.2.0",
+    "hyphenation.en-us": "^0.2.1",
+    "hypher": "^0.2.5",
+    "nlp-syllables": "^0.0.5",
+    "simi-syllable": "^1.0.0"
+  }
+}
