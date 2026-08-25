@@ -107,8 +107,6 @@ export function analyseText(text){
             let events = [];
             for(let w of words){
                 w = w.replaceAll(/[^A-Za-z ]+/g, ''); // punctuation etc.
-                //let doc = nlp(w);
-                console.log(w);
                 let syllables = hyphenated(w).split(/\u00AD/);
                 if(!syllables) continue;
                 if(w.includes('_')){
@@ -133,7 +131,6 @@ export function analyseText(text){
         let stats = rows.map(r => centreStats(r));
         let centrePos = Math.max(...stats.map(s => s.centre));
         let maxLength = centrePos + Math.max(...stats.map(s => s.after));
-        console.log(rows, stats, centrePos, maxLength)
         let normalisedRows = [];
         for(let r of rows){
             let newRow = [];
@@ -175,6 +172,7 @@ function timingForColumn(col){
             return currentValue;
         }
     }
+    return currentValue;
 }
 
 function startsUpperCase(s){
@@ -206,7 +204,6 @@ function normaliseVowels(s){
     let firstNonVowel = s.split('').findIndex(c => !isVowel(c));
     if(firstNonVowel == -1) return [s];
     let hasVowelsAfter = s.slice(firstNonVowel).split('').find(c => isVowel(c));
-    console.log(s, firstNonVowel, hasVowelsAfter)
     if(hasVowelsAfter){
         return [s.slice(0, firstNonVowel), s.slice(firstNonVowel)];
     }

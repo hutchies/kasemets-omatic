@@ -2,6 +2,7 @@
 <script >
 // @ts-nocheck
     import { analyseText, dynamicValues, timingThresholds } from "./analyse.svelte";
+
     import Event from "./Event.svelte";
 
 
@@ -31,7 +32,6 @@ let piece = $state([]);
 let showWords = $state(false);
 
 $effect(() => piece = analyseText(source, {}))
-  console
 </script>
 
   <h1>Kasemets-o-matic</h1>
