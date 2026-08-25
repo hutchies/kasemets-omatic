@@ -19,12 +19,12 @@ museum. Eventually
 Left with the face of the
 sun-Di_al whose hand travels
 in those Moments when there is
-Abundant light. still movement.
+A_bun_dant light. still movement.
 Nothing more than sound itself.
 
 Mistake is in trying 
 to view One's work at its
-dynamic Rather 
+dynamic Ra_ther 
 Than a man-made history.
 find Out its undoing.
 Nothing more than a glove.`);

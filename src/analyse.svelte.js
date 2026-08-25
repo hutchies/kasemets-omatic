@@ -103,21 +103,25 @@ export function analyseText(text){
         let columns = [];
         let rows = [];
         for(let line of lines){
+            line = line.replaceAll(/[.,;:-]/g, ' ');
+            line = line.replaceAll(/[^A-Za-z_ ]+/g, ''); // punctuation etc.
             let words = line.split(/\s+/);
             let events = [];
-            for(let w of words){
-                w = w.replaceAll(/[^A-Za-z ]+/g, ''); // punctuation etc.
+            for(let w of words){   
                 let syllables = hyphenated(w).split(/\u00AD/);
                 if(!syllables) continue;
                 if(w.includes('_')){
+                    
                     syllables = w.split('_');
+                    console.log(syllables);
                 }
+                syllables = syllables.filter(s => s);
                 if(syllables.length == 0 || !w) continue;
                 
-                if(isVowel(syllables[0][0])){
+                /*if(isVowel(syllables[0][0])){
                     // normalise it
                     syllables = [...normaliseVowels(syllables[0]), ...syllables.slice(1)]
-                }
+                }*/
                
                 for(let s of syllables){
                     if(!s) continue;
