@@ -95,7 +95,8 @@
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    opacity: 50%;
+    opacity: 40%;
+    color: blue;
     z-index: -5;
 }
 </style>
